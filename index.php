@@ -12,29 +12,39 @@ class Movie
         $this->hero = $_hero;
     }
 
-    public function getMovie()
+    public function getTitle()
     {
-        echo $this->title . ': diretto da ' . $this->director . ' con ' . $this->hero;
+        return $this->title;
+    }
+
+    public function getDirector()
+    {
+        return $this->director;
+    }
+
+    public function getHero()
+    {
+        return $this->hero;
     }
 } ?>
 
 <h2>
     <?php
         $movie1 = new Movie('Dune', 'Denis Villeneuve', 'Timothée Chalamet');
-        $movie1->getMovie();
+        echo $movie1->getTitle().': diretto da '.$movie1->getDirector().' con '.$movie1->getHero();
     ?>
 </h2>
 
 <h2>
     <?php
         $movie2 = new Movie('The Northman', 'Robert Eggers', 'Alexander Skarsgård');
-        $movie2->getMovie();
+        echo $movie2->getTitle().': diretto da '.$movie2->getDirector().' con '.$movie2->getHero();
     ?>
 </h2>
 
 <h2>
     <?php
         $movie3 = new Movie('Jin-Roh - Uomini e lupi', 'Hiroyuki Okiura', 'Yoshikatsu Fujiki');
-        $movie3->getMovie();
+        echo $movie3->getTitle().': diretto da '.$movie3->getDirector().' con '.$movie3->getHero();
     ?>
 </h2>
